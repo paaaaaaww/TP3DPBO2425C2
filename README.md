@@ -13,52 +13,63 @@ Program ini terdiri dari lima kelas utama, yaitu Person, Docter, Pasien, Ruangan
   
 
 B. Atribut & Method
-1. Person
+1. Person (Superclass)
 Atribut:
-- nama : Nama orang
-- umur : Umur orang
-- alamat : Alamat tempat tinggal
-- gender : Jenis kelamin
+- nama (string) → Nama lengkap individu
+- umur (int) → Umur individu
+- alamat (string) → Alamat tempat tinggal
+- gender (string) → Jenis kelamin
+
 Method:
 
-Tidak ada method khusus, berfungsi sebagai superclass untuk Dokter & Pasien.
+- virtual void tampilkanInfo() → Method virtual yang berfungsi untuk menampilkan informasi dasar dari objek Person.
+  Karena dideklarasikan sebagai virtual, method ini akan dioverride oleh subclass Dokter dan Pasien agar masing-masing dapat menampilkan informasi spesifiknya.
+- Konsep ini merupakan contoh nyata dari polimorfisme pada program.
 
-2. Dokter (extends Person)
+2. Dokter (Subclass dari Person)
 Atribut tambahan:
-- spesialis : Bidang keahlian dokter
-- idDokter : ID unik dokter
-- notelp : Nomor telepon dokter
-Method:
-- tampilkanInfo() : Menampilkan semua informasi dokter.
+- spesialis (string) → Bidang keahlian dokter
+- idDokter (string) → ID unik dokter
+- notelp (string) → Nomor telepon dokter
 
-3. Pasien (extends Person)
-Atribut tambahan:
-- status : Status pasien (Rawat Inap / Rawat Jalan)
-- penyakit : Penyakit pasien
-- idPasien : ID unik pasien
 Method:
-- tampilkanInfo() : Menampilkan semua informasi pasien.
+
+- void tampilkanInfo() override → Mengoverride method dari Person untuk menampilkan informasi dokter secara lengkap, termasuk atribut yang diwarisi dari Person dan atribut khusus dokter.
+
+3. Pasien (Subclass dari Person)
+Atribut tambahan:
+- status (string) → Status perawatan pasien (misalnya: Rawat Inap atau Rawat Jalan)
+- penyakit (string) → Jenis penyakit yang diderita pasien
+- idPasien (string) → ID unik pasien
+
+Method:
+
+- void tampilkanInfo() override → Mengoverride method dari Person untuk menampilkan informasi pasien secara lengkap, baik atribut yang diwarisi maupun atribut spesifik pasien.
 
 4. Ruangan
 Atribut:
-- id : Nomor/ID ruangan
-- tipe : Jenis ruangan (ICU, Kelas 1, dll)
-- kapasitas : Maksimal pasien yang bisa ditampung
+- id (string) → ID unik ruangan
+- tipe (string) → Jenis ruangan (misalnya: ICU, Kelas 1, dll.)
+- kapasitas (int) → Jumlah maksimal pasien yang dapat ditampung
+
 Method:
-- tampilkanInfo() : Menampilkan info ruangan beserta daftar pasien di dalamnya
+
+- void tampilkanInfo() → Menampilkan detail ruangan termasuk daftar pasien yang menempatinya.
 
 5. RumahSakit
 Atribut:
-- nama : Nama rumah sakit
-- alamat : Alamat rumah sakit
-- daftarDokter : List semua dokter
-- daftarPasien : List semua pasien
-- daftarRuangan : List semua ruangan
+- nama (string) → Nama rumah sakit
+- alamat (string) → Alamat rumah sakit
+- daftarDokter (List<Dokter>) → Daftar seluruh dokter yang bekerja di rumah sakit
+- daftarPasien (List<Pasien>) → Daftar seluruh pasien yang terdaftar
+- daftarRuangan (List<Ruangan>) → Daftar seluruh ruangan yang tersedia
+
 Method:
-tambahDokter(Dokter d) : Menambahkan dokter ke rumah sakit
-tambahPasien(Pasien p) : Menambahkan pasien ke rumah sakit
-tambahRuangan(Ruangan r) : Menambahkan ruangan ke rumah sakit
-tampilkanSemuaData() : Menampilkan semua data rumah sakit, dokter, pasien, dan ruangan beserta pasien di tiap ruangan
+
+- void tambahDokter(Dokter d) → Menambahkan objek dokter ke dalam daftar dokter rumah sakit.
+- void tambahPasien(Pasien p) → Menambahkan objek pasien ke dalam daftar pasien rumah sakit.
+- void tambahRuangan(Ruangan r) → Menambahkan objek ruangan ke dalam daftar ruangan rumah sakit.
+- void tampilkanSemuaData() → Menampilkan seluruh data rumah sakit secara lengkap, termasuk informasi setiap dokter, pasien, dan ruangan beserta pasien yang menempatinya.
 
 C. Desain Program
   Konsep inheritance diterapkan dengan menjadikan Doctor dan Patient sebagai turunan dari Person. Hal ini dilakukan karena keduanya memiliki atribut dasar yang sama seperti nama dan usia. Dengan begitu, tidak perlu menuliskan ulang atribut atau method yang sama, sehingga kode menjadi lebih efisien dan terstruktur.
