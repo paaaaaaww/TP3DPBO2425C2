@@ -8,7 +8,8 @@ Program ini terdiri dari lima kelas utama, yaitu Person, Docter, Pasien, Ruangan
 - Doctor dan Patient mewarisi atribut dari kelas Person dan juga menambahkan atribut khusus masing-masing.
 - RumahSakit berperan sebagai pengelola utama data dokter, pasien, serta ruangan melalui composition (hubungan “has-a”).
 - RumahSakit memiliki hubungan composition dengan Ruangan, dokter, pasien  
-- Struktur relasinya dapat digambarkan seperti ini:
+
+Struktur relasinya dapat digambarkan seperti ini:
 
 ![Diagram](diagram.png)
 
