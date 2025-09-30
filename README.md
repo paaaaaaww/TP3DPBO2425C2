@@ -10,7 +10,7 @@ Program ini terdiri dari lima kelas utama, yaitu Person, Docter, Pasien, Ruangan
 - RumahSakit memiliki hubungan composition dengan Ruangan, dokter, pasien  
 - Struktur relasinya dapat digambarkan seperti ini:
 
-  
+![Diagram](diagram.png)
 
 **B. Atribut & Method**
 1. Person (Superclass)
