@@ -102,8 +102,20 @@ Method:
   
   Before
 
-  ![data awal](CPP/cpp_before.png)
+  ![data awal](CPP/Dokumentasi/cpp_before.png)
 
   After
 
-  ![data setelah ditambah](CPP/cpp_after.png)
+  ![data setelah ditambah](CPP/Dokumentasi/cpp_after.png)
+
+- PYTHON
+
+  Before
+
+  ![data awal](PYTHON/Dokumentasi/py_before.png)
+
+  After
+
+  ![data setelah ditambah](PYTHON/Dokumentasi/py_after.png)
+
+  
