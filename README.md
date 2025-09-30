@@ -96,3 +96,14 @@ Method:
   Setelah data awal tersimpan, program menampilkan seluruh informasi melalui tampilkanSemuaData(). Di sini, konsep inheritance berjalan karena Doctor dan Pasien mewarisi atribut dan method dari Person, serta menggunakan polimorfisme saat menjalankan tampilkanInfo() sesuai jenis objeknya.
 
   Selanjutnya, program kembali menambahkan beberapa data baru dan menampilkan ulang seluruh informasi untuk memperlihatkan pembaruan tersebut. Proses ini mencerminkan alur sistem manajemen rumah sakit, mulai dari inisialisasi data, penambahan data baru, hingga penampilan informasi secara terstruktur berdasarkan hubungan hierarkis antara kelas induk dan turunannya.
+
+**Dokumentasi**
+- CPP
+  
+  Before
+
+  ![data awal](CPP/cpp_before.png)
+
+  After
+
+  ![data setelah ditambah](CPP/cpp_after.png)
