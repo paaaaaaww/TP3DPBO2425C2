@@ -2,7 +2,7 @@
 
 Saya Fauzia Rahma Nisa mengerjakan Tugas Praktikum 3 dalam mata kuliah Desain dan Pemrograman Berdasarkan Objek untuk keberkahanNya maka saya tidak melakukan kecurangan seperti yang telah dispesifikasikan. Aamiin.
 
-A. Desain Diagram Program
+**A. Desain Diagram Program**
 Program ini terdiri dari lima kelas utama, yaitu Person, Docter, Pasien, Ruangan, dan RumahSakit. Hubungan antar kelas dirancang menggunakan konsep inheritance dan composition.
 - Person menjadi kelas dasar yang berisi atribut umum seseorang.
 - Doctor dan Patient mewarisi atribut dari kelas Person dan juga menambahkan atribut khusus masing-masing.
@@ -12,7 +12,7 @@ Program ini terdiri dari lima kelas utama, yaitu Person, Docter, Pasien, Ruangan
 
   
 
-B. Atribut & Method
+**B. Atribut & Method**
 1. Person (Superclass)
 
 Atribut:
@@ -80,9 +80,18 @@ Method:
 - void tambahRuangan(Ruangan r) → Menambahkan objek ruangan ke dalam daftar ruangan rumah sakit.
 - void tampilkanSemuaData() → Menampilkan seluruh data rumah sakit secara lengkap, termasuk informasi setiap dokter, pasien, dan ruangan beserta pasien yang menempatinya.
 
-C. Desain Program
-  Konsep inheritance diterapkan dengan menjadikan Doctor dan Patient sebagai turunan dari Person. Hal ini dilakukan karena keduanya memiliki atribut dasar yang sama seperti nama dan usia. Dengan begitu, tidak perlu menuliskan ulang atribut atau method yang sama, sehingga kode menjadi lebih efisien dan terstruktur.
+**C. Desain Program**
 
-  Sementara itu, composition digunakan pada kelas RumahSakit. Objek Ruangan, Doctor, dan Patient “dimiliki” oleh rumah sakit. Artinya, ketika objek RumahSakit dihapus, maka semua objek yang dimilikinya juga ikut hilang. Desain ini mencerminkan hubungan nyata bahwa dokter, pasien, dan ruangan hanya relevan selama rumah sakit tersebut ada.
+  Pertama, inheritance diterapkan dengan menjadikan kelas Doctor dan Pasien sebagai subclass dari kelas Person. Hal ini dilakukan karena keduanya memiliki atribut dasar yang sama seperti nama, umur, alamat, dan gender. Dengan inheritance, atribut dan method umum hanya perlu ditulis sekali di kelas Person, lalu diwarisi oleh kelas turunan. Selain itu, method tampilkanInfo() pada Person bersifat virtual dan dioverride oleh Doctor serta Pasien untuk menampilkan informasi yang lebih spesifik. 
+
+  Selanjutnya, konsep composition digunakan pada kelas RumahSakit. Objek RumahSakit memiliki daftar Doctor, Pasien, dan Ruangan. Artinya, keberadaan objek-objek tersebut bergantung pada rumah sakit. jika objek RumahSakit dihapus, maka seluruh data dokter, pasien, dan ruangan juga ikut terhapus. hal ini membuktikan bahwa dokter, pasien, dan ruangan hanya relevan selama rumah sakit tersebut ada. Kelas RumahSakit juga menyediakan method penting seperti tambahDokter(), tambahPasien(), tambahRuangan(), dan tampilkanSemuaData() untuk mengelola seluruh data tersebut.
+
+  Terakhir, program juga menerapkan hierarki kelas, terutama dalam versi Java. Pada level paling dasar terdapat Person sebagai superclass, kemudian Doctor dan Pasien sebagai subclass yang mewarisinya. Di sisi lain, RumahSakit berperan sebagai kelas utama yang mengelola semua data, dan Ruangan menjadi kelas pendukung yang terhubung melalui komposisi.
   
-D. Alur Program
+**D. Alur Program**
+
+  Program diawali dengan membuat objek RumahSakit berisi informasi dasar seperti nama dan alamat rumah sakit. Setelah itu, data awal dokter, pasien, dan ruangan dimasukkan menggunakan method tambahDokter(), tambahPasien(), dan tambahRuangan(). Setiap method tersebut akan membuat objek baru (Doctor, Pasien, atau Ruangan) lalu menyimpannya di dalam daftar milik RumahSakit (composition).
+
+  Setelah data awal tersimpan, program menampilkan seluruh informasi melalui tampilkanSemuaData(). Di sini, konsep inheritance berjalan karena Doctor dan Pasien mewarisi atribut dan method dari Person, serta menggunakan polimorfisme saat menjalankan tampilkanInfo() sesuai jenis objeknya.
+
+  Selanjutnya, program kembali menambahkan beberapa data baru dan menampilkan ulang seluruh informasi untuk memperlihatkan pembaruan tersebut. Proses ini mencerminkan alur sistem manajemen rumah sakit, mulai dari inisialisasi data, penambahan data baru, hingga penampilan informasi secara terstruktur berdasarkan hubungan hierarkis antara kelas induk dan turunannya.
