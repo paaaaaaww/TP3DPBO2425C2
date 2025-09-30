@@ -14,6 +14,7 @@ Program ini terdiri dari lima kelas utama, yaitu Person, Docter, Pasien, Ruangan
 
 B. Atribut & Method
 1. Person (Superclass)
+
 Atribut:
 - nama (string) → Nama lengkap individu
 - umur (int) → Umur individu
@@ -27,7 +28,9 @@ Method:
 - Konsep ini merupakan contoh nyata dari polimorfisme pada program.
 
 2. Dokter (Subclass dari Person)
+   
 Atribut tambahan:
+
 - spesialis (string) → Bidang keahlian dokter
 - idDokter (string) → ID unik dokter
 - notelp (string) → Nomor telepon dokter
@@ -37,7 +40,9 @@ Method:
 - void tampilkanInfo() override → Mengoverride method dari Person untuk menampilkan informasi dokter secara lengkap, termasuk atribut yang diwarisi dari Person dan atribut khusus dokter.
 
 3. Pasien (Subclass dari Person)
+   
 Atribut tambahan:
+
 - status (string) → Status perawatan pasien (misalnya: Rawat Inap atau Rawat Jalan)
 - penyakit (string) → Jenis penyakit yang diderita pasien
 - idPasien (string) → ID unik pasien
@@ -47,7 +52,9 @@ Method:
 - void tampilkanInfo() override → Mengoverride method dari Person untuk menampilkan informasi pasien secara lengkap, baik atribut yang diwarisi maupun atribut spesifik pasien.
 
 4. Ruangan
+   
 Atribut:
+
 - id (string) → ID unik ruangan
 - tipe (string) → Jenis ruangan (misalnya: ICU, Kelas 1, dll.)
 - kapasitas (int) → Jumlah maksimal pasien yang dapat ditampung
@@ -57,7 +64,9 @@ Method:
 - void tampilkanInfo() → Menampilkan detail ruangan termasuk daftar pasien yang menempatinya.
 
 5. RumahSakit
+   
 Atribut:
+
 - nama (string) → Nama rumah sakit
 - alamat (string) → Alamat rumah sakit
 - daftarDokter (List<Dokter>) → Daftar seluruh dokter yang bekerja di rumah sakit
