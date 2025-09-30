@@ -118,4 +118,12 @@ Method:
 
   ![data setelah ditambah](PYTHON/Dokumentasi/py_after.png)
 
+- JAVA
+
+  Before
+
+  ![data awal](JAVA/Dokumentasi/java_before.png)
   
+  After
+
+  ![data setelah ditambah](JAVA/Dokumentasi/java_after.png)
